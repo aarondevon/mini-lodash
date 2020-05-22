@@ -11,7 +11,7 @@ _.clamp = function (num, lower, upper) {
   return clampedValue;
 };
 
-//.inRange()
+// .inRange()
 _.inRange = function (number, lower, upper) {
   if (upper === undefined) {
     upper = lower;
@@ -28,3 +28,10 @@ _.inRange = function (number, lower, upper) {
   }
   return false;
 };
+
+// .words()
+_.words = function (string) {
+  return string.split(' ');
+};
+
+console.log(_.words('Hello, janice. How are you?'));
