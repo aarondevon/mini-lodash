@@ -54,4 +54,10 @@ _.pad = function (string, length) {
   return string;
 };
 
-console.log(_.pad('Hello', 10));
+// .has()
+_.has = function (object, key) {
+  if (object[key]) {
+    return true;
+  }
+  return false;
+};
