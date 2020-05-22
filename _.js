@@ -2,13 +2,11 @@ const _ = {};
 
 // .clamp()
 _.clamp = function (num, lower, upper) {
-  if (num >= lower && num <= upper) {
-    return num;
-  }
-  if (num < lower) {
-    return lower;
-  }
-  return upper;
-};
+  let minClampedValue = 0;
+  let clampedValue = 0;
 
-console.log(_.clamp(4, 5, 10));
+  minClampedValue = Math.max(num, lower);
+  clampedValue = Math.min(minClampedValue, upper);
+
+  return clampedValue;
+};
