@@ -61,3 +61,15 @@ _.has = function (object, key) {
   }
   return false;
 };
+
+// .invert()
+_.invert = function (object) {
+  const invertedObject = {};
+  const objKeysArr = Object.keys(object);
+  const objValuesArr = Object.values(object);
+
+  for (let i = 0; i < objKeysArr.length; i++) {
+    invertedObject[objValuesArr[i]] = objKeysArr[i];
+  }
+  return invertedObject;
+};
