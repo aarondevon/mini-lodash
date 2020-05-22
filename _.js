@@ -34,4 +34,24 @@ _.words = function (string) {
   return string.split(' ');
 };
 
-console.log(_.words('Hello, janice. How are you?'));
+// .pad()
+_.pad = function (string, length) {
+  if (string.length >= length) {
+    return string;
+  }
+
+  let arrString = string.split('');
+  let pad = length - string.length;
+
+  for (let i = 0; i < pad; i++) {
+    if (i < Math.floor(pad / 2)) {
+      arrString.unshift(' ');
+    } else {
+      arrString.push(' ');
+    }
+  }
+  string = arrString.join('');
+  return string;
+};
+
+console.log(_.pad('Hello', 10));
