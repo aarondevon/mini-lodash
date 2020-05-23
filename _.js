@@ -73,3 +73,16 @@ _.invert = function (object) {
   }
   return invertedObject;
 };
+
+// .drop()
+_.drop = function (arr, number) {
+  let droppedArray = [];
+  if (number === undefined) {
+    number = 1;
+    droppedArray = arr.slice(number);
+    // arr[0] = 5;
+    return droppedArray;
+  }
+  droppedArray = arr.slice(number);
+  return droppedArray;
+};
